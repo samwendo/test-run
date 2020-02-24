@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/about-bg.jpg') }}')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>About Me</h1>
+          <span class="subheading">This is what I do.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <p>I am a professional graphic designer. I have a passion for applications and so I decided to join Moringa School Boot Camp.</p>
+      <p>I am currently undertaking fullstack course where I will be able to do both front end and backend of applications.</p>
+      <p>I have a knack for interfaces so who knows I may end up specializing in UI/ UX. Although machine learning, AI and cybersecurity are my other interests.</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}
+
+{% endblock %}
