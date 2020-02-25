@@ -26,6 +26,7 @@ class Config:
     def init_app(app):
         pass
 
+    
 class ProdConfig(Config):
     '''
     Production configuration child class
@@ -33,14 +34,14 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sam:54321@localhost/reblog_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sam:123@localhost/reblo_test'
 
 class DevConfig(Config):
     '''
     Development configuration child class
     '''
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    DEBUG = False
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sam:123@localhost/reblo'
+    DEBUG = True
 
 config_options = {
 'development': DevConfig,
